@@ -2,7 +2,7 @@ package com.example.mauro.presentationmvp.ui.main;
 
 import com.example.mauro.presentationmvp.BasePresenter;
 import com.example.mauro.presentationmvp.BaseView;
-import com.example.mauro.presentationmvp.model.Student;
+import com.example.mauro.presentationmvp.data.entities.Student;
 
 import java.util.List;
 

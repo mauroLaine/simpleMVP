@@ -1,9 +1,7 @@
 package com.example.mauro.presentationmvp.ui.main;
 
-import android.util.Log;
-
-import com.example.mauro.presentationmvp.model.Student;
-import com.example.mauro.presentationmvp.model.StudentRepository;
+import com.example.mauro.presentationmvp.data.entities.Student;
+import com.example.mauro.presentationmvp.data.StudentRepository;
 
 import java.util.List;
 

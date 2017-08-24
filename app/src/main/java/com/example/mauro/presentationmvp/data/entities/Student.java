@@ -1,4 +1,4 @@
-package com.example.mauro.presentationmvp.model;
+package com.example.mauro.presentationmvp.data.entities;
 
 /**
  * Created by mauro on 8/24/17.

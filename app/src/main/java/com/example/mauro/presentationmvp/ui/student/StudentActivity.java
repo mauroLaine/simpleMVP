@@ -6,7 +6,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.mauro.presentationmvp.R;
-import com.example.mauro.presentationmvp.model.Student;
+import com.example.mauro.presentationmvp.data.entities.Student;
 import com.example.mauro.presentationmvp.ui.main.MainActivity;
 
 import butterknife.BindView;

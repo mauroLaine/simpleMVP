@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.mauro.presentationmvp.R;
-import com.example.mauro.presentationmvp.model.Student;
+import com.example.mauro.presentationmvp.data.entities.Student;
 import com.example.mauro.presentationmvp.ui.student.StudentActivity;
 
 import java.util.ArrayList;

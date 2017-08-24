@@ -1,14 +1,12 @@
 package com.example.mauro.presentationmvp.ui.student;
 
-import android.util.Log;
-
-import com.example.mauro.presentationmvp.model.Student;
-import com.example.mauro.presentationmvp.model.StudentRepository;
-import com.example.mauro.presentationmvp.ui.main.MainContract;
+import com.example.mauro.presentationmvp.data.entities.Student;
+import com.example.mauro.presentationmvp.data.StudentRepository;
 
 /**
  * Created by mauro on 8/24/17.
  */
+
 
 public class StudentPresenter implements StudentContract.Presenter {
 

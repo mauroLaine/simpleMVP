@@ -1,4 +1,6 @@
-package com.example.mauro.presentationmvp.model;
+package com.example.mauro.presentationmvp.data;
+
+import com.example.mauro.presentationmvp.data.entities.Student;
 
 import java.util.ArrayList;
 import java.util.List;

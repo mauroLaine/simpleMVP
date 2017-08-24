@@ -2,10 +2,7 @@ package com.example.mauro.presentationmvp.ui.student;
 
 import com.example.mauro.presentationmvp.BasePresenter;
 import com.example.mauro.presentationmvp.BaseView;
-import com.example.mauro.presentationmvp.model.Student;
-import com.example.mauro.presentationmvp.ui.main.MainContract;
-
-import java.util.List;
+import com.example.mauro.presentationmvp.data.entities.Student;
 
 /**
  * Created by mauro on 8/24/17.
