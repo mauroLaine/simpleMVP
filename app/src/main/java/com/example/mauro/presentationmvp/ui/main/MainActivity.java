@@ -1,5 +1,6 @@
 package com.example.mauro.presentationmvp.ui.main;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.mauro.presentationmvp.R;
 import com.example.mauro.presentationmvp.model.Student;
+import com.example.mauro.presentationmvp.ui.student.StudentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
 
     private static final String TAG = "MainActivityTAG_";
+    public static final String STRING_NAME = "STUDENT_NAME";
     @BindView(R.id.a_main_list)
     ListView listView;
 
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
 
-    private void setUpView(){
+    private void setUpView() {
         students = new ArrayList<>();
         studentAdapter = new ArrayAdapter<Student>(this, android.R.layout.simple_list_item_1, students);
         listView.setAdapter(studentAdapter);
@@ -52,8 +55,11 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Student student = students.get(i);
-                Toast.makeText(MainActivity.this, student.toString(), Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "onItemClick: " + student.toString());
+//                Toast.makeText(MainActivity.this, student.toString(), Toast.LENGTH_SHORT).show();
+//                Log.d(TAG, "onItemClick: " + student.toString());
+                Intent intent = new Intent(view.getContext(), StudentActivity.class);
+                intent.putExtra(STRING_NAME, student.getName());
+                startActivity(intent);
             }
         });
     }

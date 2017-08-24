@@ -13,7 +13,7 @@ public class StudentRepository {
     private List<Student> students;
 
     public static StudentRepository createStudentRepository() {
-        if(studentRepository == null){
+        if (studentRepository == null) {
             studentRepository = new StudentRepository();
         }
         return studentRepository;
@@ -33,13 +33,13 @@ public class StudentRepository {
         students.add(s5);
     }
 
-    public List<Student> getStudents(){
+    public List<Student> getStudents() {
         return students;
     }
 
-    public Student getStudent(String name){
-        for (Student student: students) {
-            if(student.getName().equals(name)){
+    public Student getStudent(String name) {
+        for (Student student : students) {
+            if (student.getName().equals(name)) {
                 return student;
             }
         }

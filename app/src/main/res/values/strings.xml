@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PresentationMVP</string>
+    <string name="student_name">Name: %1$s</string>
+    <string name="student_age">Edad: %1$d</string>
+    <string name="student_grade">Grade: %1$d</string>
+
 </resources>
