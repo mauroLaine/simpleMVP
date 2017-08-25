@@ -24,10 +24,10 @@ public class StudentRepository {
     private StudentRepository() {
         this.students = new ArrayList<>();
         Student s1 = new Student("Mauro", 24, 10);
-        Student s2 = new Student("Anel", 28, 6);
+        Student s2 = new Student("Anel", 28, 8);
         Student s3 = new Student("Luis", 32, 9);
-        Student s4 = new Student("Andrea", 25, 8);
-        Student s5 = new Student("Julio", 22, 7);
+        Student s4 = new Student("Andrea", 5, 8);
+        Student s5 = new Student("Julio", 22, -7);
         students.add(s1);
         students.add(s2);
         students.add(s3);

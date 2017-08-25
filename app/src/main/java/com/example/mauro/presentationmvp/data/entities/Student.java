@@ -4,6 +4,7 @@ package com.example.mauro.presentationmvp.data.entities;
  * Created by mauro on 8/24/17.
  */
 
+
 public class Student {
 
     private String name;
@@ -12,8 +13,8 @@ public class Student {
 
     public Student(String name, int age, int grade) {
         this.name = name;
-        this.age = age;
-        this.grade = grade;
+        setAge(age);
+        setGrade(grade);
     }
 
     public String getName() {
@@ -29,7 +30,7 @@ public class Student {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        this.age = age < 18 ? 18 : age;
     }
 
     public int getGrade() {
@@ -37,11 +38,12 @@ public class Student {
     }
 
     public void setGrade(int grade) {
-        this.grade = grade;
+        this.grade = grade > 0 ? grade > 10 ? 10 : grade : 0;
     }
 
     @Override
     public String toString() {
-        return "Name: "+ name;
+        return "Name: " + name;
     }
+
 }

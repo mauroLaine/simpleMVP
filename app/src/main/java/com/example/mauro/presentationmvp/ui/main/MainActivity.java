@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         mainPresenter.attachView(this);
     }
 
-
     private void setUpView() {
         students = new ArrayList<>();
         studentAdapter = new ArrayAdapter<Student>(this, android.R.layout.simple_list_item_1, students);
@@ -54,13 +53,16 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Student student = students.get(i);
-//                Toast.makeText(MainActivity.this, student.toString(), Toast.LENGTH_SHORT).show();
-//                Log.d(TAG, "onItemClick: " + student.toString());
                 Intent intent = new Intent(view.getContext(), StudentActivity.class);
                 intent.putExtra(STRING_NAME, student.getName());
                 startActivity(intent);
             }
         });
+    }
+
+    @OnClick(R.id.a_main_btn)
+    public void loadData(View view) {
+        mainPresenter.loadResults();
     }
 
     @Override
@@ -79,11 +81,5 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         students.clear();
         students.addAll(results);
         studentAdapter.notifyDataSetChanged();
-    }
-
-    @OnClick(R.id.a_main_btn)
-    public void loadData(View view) {
-        Log.d(TAG, "loadData: ");
-        mainPresenter.loadResults();
     }
 }
