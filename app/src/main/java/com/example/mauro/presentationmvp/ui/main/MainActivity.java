@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.mauro.presentationmvp.R;
 import com.example.mauro.presentationmvp.data.entities.Student;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     public void showError(String error) {
         Log.d(TAG, "showError: " + error);
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
     }
 
     @Override

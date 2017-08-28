@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mauro.presentationmvp.R;
 import com.example.mauro.presentationmvp.data.entities.Student;
@@ -40,6 +41,7 @@ public class StudentActivity extends AppCompatActivity implements StudentContrac
     @Override
     public void showError(String error) {
         Log.d(TAG, "showError: " + error);
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
     }
 
     @Override
