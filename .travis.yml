@@ -1,13 +1,33 @@
+# android:
+#   components:
+#     - tools
+#     - platform-tools
+#     - tools
+#
+#     # The BuildTools version used by your project
+#     - build-tools-25.0.1
+#
+#     # The SDK version used to compile your project
+#     - android-25
+#     - extra-google-m2repository
+#     - extra-android-m2repository
+
+language: android
+jdk: oraclejdk8
 android:
   components:
     - tools
-    - platform-tools
-    - tools
-
-    # The BuildTools version used by your project
-    - build-tools-25.0.1
-
-    # The SDK version used to compile your project
     - android-25
+    - build-tools-25.0.1
     - extra-google-m2repository
     - extra-android-m2repository
+
+  licenses:
+    - android-sdk-license-.+
+
+before_install:
+  - echo yes | android update sdk --all --filter build-tools-25.0.1 --no-ui --force
+
+script:
+    - echo "Travis branch is $TRAVIS_BRANCH"
+    - ./gradlew clean test
